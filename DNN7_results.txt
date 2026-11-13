@@ -1,0 +1,80 @@
+DNN7 TEST RESULTS
+============================================================
+Loss                 : 63.71312
+Slot accuracy        : 0.24875
+Beam accuracy        : 0.27001
+Column accuracy      : 0.18939
+Building exact match : 0.00000
+
+Accuracy by floor:
+   1FL | beam=0.00000 (0) | column=0.24444 (90)
+   2FL | beam=0.40212 (189) | column=0.02941 (68)
+   3FL | beam=0.44526 (137) | column=0.14000 (50)
+   4FL | beam=0.18095 (105) | column=0.32432 (37)
+   5FL | beam=0.20370 (54) | column=0.36842 (19)
+   RFL | beam=0.12698 (252) | column=0.00000 (0)
+
+First 20 predictions:
+                              file_name          slot floor component_type  predicted_catalog      true_catalog  predicted_dimension  true_dimension  is_correct
+F1_X1_5000_Y1_4000_H3000_W6p5_model.csv  beam:RFL:GX1   RFL           beam     H-150x75x5x7x8   H-194x150x6x9x8                150.0           200.0       False
+F1_X1_5000_Y1_4000_H3000_W6p5_model.csv  beam:RFL:GY1   RFL           beam     H-150x75x5x7x8   H-148x100x6x9x8                150.0           150.0       False
+F1_X1_5000_Y1_4000_H3000_W6p5_model.csv column:1FL:C1   1FL         column     B-150x150x6x15    B-150x150x6x15                150.0           150.0        True
+F1_X1_9000_Y1_4000_H3000_W6p0_model.csv  beam:RFL:GX1   RFL           beam H-390x300x10x16x13 H-294x200x8x12x13                400.0           300.0       False
+F1_X1_9000_Y1_4000_H3000_W6p0_model.csv  beam:RFL:GY1   RFL           beam     H-150x75x5x7x8 H-200x100x5.5x8x8                150.0           200.0       False
+F1_X1_9000_Y1_4000_H3000_W6p0_model.csv column:1FL:C1   1FL         column     B-150x150x6x15  B-150x150x9x22.5                150.0           150.0       False
+F1_X1_9000_Y1_4000_H3000_W7p0_model.csv  beam:RFL:GX1   RFL           beam H-390x300x10x16x13 H-294x200x8x12x13                400.0           300.0       False
+F1_X1_9000_Y1_4000_H3000_W7p0_model.csv  beam:RFL:GY1   RFL           beam     H-150x75x5x7x8   H-148x100x6x9x8                150.0           150.0       False
+F1_X1_9000_Y1_4000_H3000_W7p0_model.csv column:1FL:C1   1FL         column     B-150x150x6x15    B-200x200x8x20                150.0           150.0       False
+F1_X2_4000_Y1_4000_H3000_W6p0_model.csv  beam:RFL:GX1   RFL           beam     H-150x75x5x7x8   H-148x100x6x9x8                150.0           150.0       False
+F1_X2_4000_Y1_4000_H3000_W6p0_model.csv  beam:RFL:GY1   RFL           beam     H-150x75x5x7x8   H-148x100x6x9x8                150.0           150.0       False
+F1_X2_4000_Y1_4000_H3000_W6p0_model.csv  beam:RFL:GY2   RFL           beam     H-150x75x5x7x8   H-148x100x6x9x8                150.0           150.0       False
+F1_X2_4000_Y1_4000_H3000_W6p0_model.csv column:1FL:C1   1FL         column     B-150x150x6x15    B-150x150x6x15                150.0           150.0        True
+F1_X2_4000_Y1_4000_H3000_W7p0_model.csv  beam:RFL:GX1   RFL           beam     H-150x75x5x7x8   H-148x100x6x9x8                150.0           150.0       False
+F1_X2_4000_Y1_4000_H3000_W7p0_model.csv  beam:RFL:GY1   RFL           beam     H-150x75x5x7x8   H-148x100x6x9x8                150.0           150.0       False
+F1_X2_4000_Y1_4000_H3000_W7p0_model.csv  beam:RFL:GY2   RFL           beam     H-150x75x5x7x8   H-148x100x6x9x8                150.0           150.0       False
+F1_X2_4000_Y1_4000_H3000_W7p0_model.csv column:1FL:C1   1FL         column     B-150x150x6x15    B-150x150x6x15                150.0           150.0        True
+F1_X2_6000_Y1_4000_H3000_W8p0_model.csv  beam:RFL:GX1   RFL           beam H-390x300x10x16x13 H-244x175x7x11x13                400.0           250.0       False
+F1_X2_6000_Y1_4000_H3000_W8p0_model.csv  beam:RFL:GY1   RFL           beam H-300x150x6.5x9x13   H-250x125x6x9x8                300.0           250.0       False
+F1_X2_6000_Y1_4000_H3000_W8p0_model.csv  beam:RFL:GY2   RFL           beam     H-150x75x5x7x8   H-250x125x6x9x8                150.0           250.0       False
+
+TEST CONSTRAINT DIAGNOSTICS
+============================================================
+count: 363
+violation_rate: 0.209366391184573
+mean_positive_violation: 0.10375846177339554
+max_positive_violation: 1.955596923828125
+satisfied_rate: 0.790633608815427
+
+The neural network input contains no section dimensions, section names, steel weights, member counts, member lengths, or target-slot labels.
+       feature   source
+        floors     建物条件
+            nx     建物条件
+            ny     建物条件
+          load     建物条件
+      x_span_1 スパン割 / X
+      x_span_2 スパン割 / X
+      x_span_3 スパン割 / X
+      x_span_4 スパン割 / X
+      x_span_5 スパン割 / X
+      x_span_6 スパン割 / X
+      y_span_1 スパン割 / Y
+      y_span_2 スパン割 / Y
+      y_span_3 スパン割 / Y
+      y_span_4 スパン割 / Y
+      y_span_5 スパン割 / Y
+      y_span_6 スパン割 / Y
+      y_span_7 スパン割 / Y
+      y_span_8 スパン割 / Y
+      y_span_9 スパン割 / Y
+     y_span_10 スパン割 / Y
+     y_span_11 スパン割 / Y
+     y_span_12 スパン割 / Y
+     y_span_13 スパン割 / Y
+     y_span_14 スパン割 / Y
+     y_span_15 スパン割 / Y
+     y_span_16 スパン割 / Y
+story_height_1       階高
+story_height_2       階高
+story_height_3       階高
+story_height_4       階高
+story_height_5       階高
